@@ -30,6 +30,7 @@ save 버튼 클릭
 
 ## Delete
 delete 버튼 클릭
+###
          delteFile(File_Name)
          
 * * *
