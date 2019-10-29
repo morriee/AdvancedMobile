@@ -25,13 +25,17 @@ save 버튼 클릭
            FileOutPutStream - openFileOutput ( File_Name, Mode)
 ### 3. 내용입력
            write - 데이터 작성
+### 4. 제목 File_Name 리스트뷰에 정렬
+
+파일 저장 후 목록으로 돌아감
     
 * * *
 
 ## Delete
 delete 버튼 클릭
 ###
-         delteFile(File_Name)
+         deleteFile(File_Name)
+파일 삭제 후 목록으로 돌아감
          
 * * *
           
@@ -41,8 +45,8 @@ delete 버튼 클릭
           FileInputStream - openFileInput( File_Name )
      
 ### 2. 작성
-         read 
-         inputText
+         read - 작성 되어 있던 text 불러옴
+         inputText - text 추가 작성
          
 * * *
 
