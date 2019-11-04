@@ -1,0 +1,187 @@
+********************activity_main_xml********************************
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="항목1" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="항목2" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="항목3" />
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="항목4" />
+    </LinearLayout>
+
+</LinearLayout>
+
+********************MainActivity.java******************************
+
+package com.example.shoppingmall;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
+import android.widget.Button;
+import android.widget.PopupMenu;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Button btn1 = (Button) findViewById(R.id.btn1);
+        Button btn2 = (Button) findViewById(R.id.btn2);
+        Button btn3 = (Button) findViewById(R.id.btn3);
+        Button btn4 = (Button) findViewById(R.id.btn4);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PopupMenu popup= new PopupMenu(getApplicationContext(), v);
+
+                getMenuInflater().inflate(R.menu.menupopup, popup.getMenu());
+
+                popup.show();
+            }
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PopupMenu popup= new PopupMenu(getApplicationContext(), v);
+
+                getMenuInflater().inflate(R.menu.menupopup2, popup.getMenu());
+
+                popup.show();
+            }
+        });
+
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PopupMenu popup= new PopupMenu(getApplicationContext(), v);
+
+                getMenuInflater().inflate(R.menu.menupopup3, popup.getMenu());
+
+                popup.show();
+            }
+        });
+
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PopupMenu popup= new PopupMenu(getApplicationContext(), v);
+
+                getMenuInflater().inflate(R.menu.menupopup4, popup.getMenu());
+
+                popup.show();
+            }
+        });
+
+    }
+
+}
+
+
+
+
+******************menupopup.xml****************************************
+
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item1"
+        android:title="1-1"/>
+    <item
+        android:id="@+id/item2"
+        android:title="1-2"/>
+    <item
+        android:id="@+id/item3"
+        android:title="1-3"/>
+    <item
+        android:id="@+id/item4"
+        android:title="1-4"/>
+</menu>
+
+******************menupopup2.xml****************************************
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item1"
+        android:title="2-1"/>
+    <item
+        android:id="@+id/item2"
+        android:title="2-2"/>
+    <item
+        android:id="@+id/item3"
+        android:title="2-3"/>
+    <item
+        android:id="@+id/item4"
+        android:title="2-4"/>
+</menu>
+******************menupopup3.xml****************************************
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item1"
+        android:title="3-1"/>
+    <item
+        android:id="@+id/item2"
+        android:title="3-2"/>
+    <item
+        android:id="@+id/item3"
+        android:title="3-3"/>
+    <item
+        android:id="@+id/item4"
+        android:title="3-4"/>
+</menu>
+******************menupopup4.xml****************************************
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item1"
+        android:title="4-1"/>
+    <item
+        android:id="@+id/item2"
+        android:title="4-2"/>
+    <item
+        android:id="@+id/item3"
+        android:title="4-3"/>
+    <item
+        android:id="@+id/item4"
+        android:title="4-4"/>
+</menu>
