@@ -18,4 +18,11 @@ contents
 - Android Studio 3.5.2 version, sdk/minimum api level 28(중요!)
 - diary pw 입력 할 때 비번 설정을 맨 처음 회원가입할 때 받는다.
 - 맨 처음 회원 가입할 때 정보는 아이디(사용자명), 비밀번호(다이어리), +a
-- 
+- 메인화면 Open API (날씨정보, 날짜 정보, 시간정보, 달력, 지도)
+- 로그인 화면 (firebase와 연동), 회원관리.
+
+* * *
+## 2. To do
+     - api 파싱할 것.
+     - 로그인 화면과 회원관리를 만들고 firebase를 통해 db와 연동할 것.
+     - 위의 두가지중 어떤 것을 하였다면 Issues
