@@ -8,6 +8,13 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     
+        <meta-data
+        android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version" />
+
+
+
+    
 3. build.gradle(Module: app)
   Google API Client Library를 안드로이드 프로젝트에 사용할 수 있도록 패키지를 추가
   
@@ -22,48 +29,4 @@
     implementation('com.google.apis:google-api-services-calendar:v3-rev235-1.22.0') {
         exclude group: 'org.apache.httpcomponents'
     }
-
-4. 사용자 인증
- private static final String[] SCOPES = { CalendarScopes.CALENDAR };
- mCredential = GoogleAccountCredential.usingOAuth2(
-                getApplicationContext(), Arrays.asList(SCOPES))
-                .setBackOff(new ExponentialBackOff());
-
-
-5. 조건
-1.
-isGooglePlayServieceAvailable는 Play Service가 실행되고 있는지 알려주는 메서드
-acquireGooglePlayServices는 Play Service를 실행시켜주는 메서드
-Play Service를 얻지못하면 에러메세지가 나오게 됨
-
-2.
-Play Service가 잘 실행되고 있으면 mCredential(인증)에 계정 정보를 넣어주어야 함
-계정정보가 없다면 chooseAccount메서드를 통해 계정을 선택
-
-3.
-isDeviceOnline메서드는 기기가 온라인 상태인지를 알려주는 메서드
-Boolean값으로 리턴해 기기가 인터넷에 연결되어 있지 않다면 TextView에 'No network connection available.' 라고 사용자에게 보여줌
-
-
- private void getResultsFromApi() {
-        if (! isGooglePlayServicesAvailable()) {
-            acquireGooglePlayServices();
-        } else if (mCredential.getSelectedAccountName() == null) {
-            chooseAccount();
-        } else if (! isDeviceOnline()) {
-            mOutputText.setText("No network connection available.");
-        } else {
-            new MakeRequestTask(mCredential).execute();
-        }
-    }
-
-Service 생성
-public MakeRequestTask(GoogleAccountCredential credential) {
-            HttpTransport transport = AndroidHttp.newCompatibleTransport();
-            JsonFactory jsonFactory = JacksonFactory.getDefaultInstance();
-            mService = new com.google.api.services.calendar.Calendar.Builder(
-                    transport, jsonFactory, credential)
-                    .setApplicationName("Google Calendar API Android Quickstart")
-                    .build();
-        }
 
