@@ -215,3 +215,5 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>  {
 --------------
 
 **Iteminfo,MainActivity,MyAdapter은 같은 폴더에 넣어야 함
+**항목 추가시에 iteminfoArrayList.add로 추가
+**사진은 drawble 폴더에 넣어서  ic_launcher_background 대신 지정
