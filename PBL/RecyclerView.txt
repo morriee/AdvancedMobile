@@ -1,0 +1,217 @@
+activity_main.xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </ScrollView>
+
+</LinearLayout>
+
+-----------------------------------------------------------------
+item.xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:gravity="center_vertical"
+    android:layout_marginBottom="8dp"
+    android:background="@android:color/white">
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/ic_launcher"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="Name"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="content"
+            android:textSize="13sp"
+            android:textColor="@android:color/darker_gray"/>
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="price"
+            android:textSize="13sp"
+            android:textColor="@android:color/darker_gray"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+------------------------
+Iteminfo.java
+
+package com.example.myapplication;
+
+public class Iteminfo {
+    public int image;
+    public String name;
+    public String content;
+    public String price;
+
+
+    public Iteminfo(int image, String name, String content,String price){
+        this.image = image;
+        this.name = name;
+        this.content = content;
+        this.price = price;
+
+    }
+}
+--------------------------------------------
+MainActivity.java
+
+package com.example.myapplication;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.os.Bundle;
+
+import java.util.ArrayList;
+
+public class MainActivity extends AppCompatActivity {
+    RecyclerView mRecyclerView;
+    RecyclerView.LayoutManager mLayoutManager;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        mRecyclerView = findViewById(R.id.recycler_view);
+        mRecyclerView.setHasFixedSize(true);
+        mLayoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+
+        ArrayList<Iteminfo> iteminfoArrayList = new ArrayList<>();
+        iteminfoArrayList.add(new Iteminfo(R.drawable.ic_launcher_background,"이름","내용", "가격"));
+        iteminfoArrayList.add(new Iteminfo(R.drawable.ic_launcher_background,"이름", "내용", "가격"));
+        iteminfoArrayList.add(new Iteminfo(R.drawable.ic_launcher_background,"이름", "내용", "가격"));
+
+        MyAdapter myAdapter = new MyAdapter(iteminfoArrayList);
+
+        mRecyclerView.setAdapter(myAdapter);
+
+    }
+}
+
+------------------------
+MyAdapter.java
+
+package com.example.myapplication;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.myapplication.Iteminfo;
+import com.example.myapplication.R;
+
+import java.util.ArrayList;
+
+
+
+public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>  {
+
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
+        ImageView image;
+        TextView name;
+        TextView content;
+        TextView price;
+
+        MyViewHolder(View view){
+            super(view);
+
+            image = view.findViewById(R.id.image);
+            name=view.findViewById(R.id.name);
+            content=view.findViewById(R.id.content);
+            price = view.findViewById(R.id.price);
+
+        }
+    }
+
+    private ArrayList<Iteminfo> IteminfoArrayList;
+    MyAdapter(ArrayList<Iteminfo> IteminfoArrayList){
+        this.IteminfoArrayList = IteminfoArrayList;
+    }
+
+    @Override
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item, parent, false);
+
+        return new MyViewHolder(v);
+    }
+
+    @Override
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+
+        MyViewHolder myViewHolder = (MyViewHolder) holder;
+
+        myViewHolder.image.setImageResource(IteminfoArrayList.get(position).image);
+        myViewHolder.name.setText(IteminfoArrayList.get(position).name);
+        myViewHolder.content.setText(IteminfoArrayList.get(position).content);
+        myViewHolder.price.setText(IteminfoArrayList.get(position).price);
+    }
+
+    @Override
+    public int getItemCount() {
+        return IteminfoArrayList.size();
+    }
+}
+
+
+--------------
+
+**Iteminfo,MainActivity,MyAdapter은 같은 폴더에 넣어야 함
