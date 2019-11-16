@@ -32,9 +32,11 @@ contents
     1. Firebase Database와 안드로이드의 데이터가 실시간으로 연동안됨.
     2. 첫 메인화면에 Database에 데이터를 등록하는 기능이 있음.
        거기서 데이터를 입력하면 실시간으로 바로 Firebase Database에 등록이 되지만 그 후 쇼핑몰 페이지로 이동되지 않음.
+    3. 옷 사진과 관련된 파일이 drawable 폴더에 있으면서도 파일 인식이 되지 않음.
 ### 해결
     1. 몇 번의 시도 끝에 해결. 문제원인은 manifest와 gradle app수준에 필요한 implements와 manifest에 db와 연동하기위해 
        인터넷에 연결하는 소스코드를 넣어야하는데 이를 빠트림. 연구 끝에 이 부분을 알아내어 해결함.
-    2. 
+    2. 두번째로 이동하는 SubActivity.java에서 불러오는 xml이 첫번째 Activity인 MainActivity로 되어있어 수정함
+    3. 사진 확장자명이 jfif는 인식하지 않음. 사진 확장자명을 모두 png로 변환
               
 * * *
