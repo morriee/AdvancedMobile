@@ -7,6 +7,7 @@ contents
 + 구현 기능
 + UI
 + 구현하는 과정에서 발생한 문제점 & 해결
++ 앱 소스:  https://github.com/morriee/MyShoppingMall
 
 * * *
 
