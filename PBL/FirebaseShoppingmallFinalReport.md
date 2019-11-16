@@ -22,7 +22,12 @@ contents
 
 ## 2. 구현 기능
 
-       //
+     1. 쇼핑몰 데이터베이스 연동: Firebase Database의 Realtime Database를 사용하여 안드로이드스튜디오와 connenct.
+     2. UI :xml은 총 3개로 모두 LinearLayout사용.
+            activity_main.xml : 상품을 db에 등록하는 페이지. 상품명을 입력하고 상품종류(shirt, pants, etc..)선택하여 db에 등록이 가능.
+                              : 버튼 '넘어가기' 클릭하여 쇼핑몰 페이지로 이동.
+            content_main.xml : ScrollView로 Recycler_view 사용
+            item.xml : 쇼핑몰 상품 목록 
 
 * * *
 ## 3. UI
