@@ -37,6 +37,13 @@ contents
 
 * * *
 ## 3. UI
+img width = "300" src = "https://user-images.githubusercontent.com/42960479/68994320-03969080-08c5-11ea-9e0b-be2e5c0b62ca.jpg">
+img width = "300" src = "https://user-images.githubusercontent.com/42960479/68994322-072a1780-08c5-11ea-8b61-dc5593d4977d.jpg">
+img width = "300" src = "https://user-images.githubusercontent.com/42960479/68994323-08f3db00-08c5-11ea-97ce-bf4861a59630.jpg">
+
+
+
+
 
 * * *
 ## 4. 구현하는 과정에서 발생한 문제점 & 해결
