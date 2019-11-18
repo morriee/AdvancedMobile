@@ -1,0 +1,9 @@
+----------build.gradle
+
+implementation 'org.jsoup:jsoup:1.11.3'
+
+
+----------AndroidManifest.xml
+
+
+<uses-permission android:name="android.permission.INTERNET" />
