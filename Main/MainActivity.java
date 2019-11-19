@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         TextView textView = (TextView)findViewById(R.id.Temperature);
         TextView textView1= (TextView)findViewById(R.id.Finedust);
         TextView textView2= (TextView)findViewById(R.id.Ozone);
-        ImageView imageView= (ImageView)findViewById(R.id.weather_icon);
+        ImageView imageView= (ImageView)findViewById(R.id.WeatherImage);
 
 
 
@@ -106,13 +106,15 @@ public class MainActivity extends AppCompatActivity {
         FinedustConnection finedustConnection = new FinedustConnection();
         OzoneConnection ozoneConnection = new OzoneConnection();
 
-
-
-        AsyncTask<String, String, String> result1 = weatherConnection.execute("","");
         AsyncTask<String, String, String> result2 = finedustConnection.execute("","");
         AsyncTask<String, String, String> result3 = ozoneConnection.execute("","");
 
         try{
+
+
+
+            AsyncTask<String, String, String> result1 = weatherConnection.execute("","");
+
             String msg1 = result1.get();
             String msg2 = result2.get();
             String msg3 = result3.get();
@@ -198,7 +200,7 @@ public class MainActivity extends AppCompatActivity {
                         URL url = new URL(ImagePath);
                         HttpURLConnection conn = (HttpURLConnection)url.openConnection();
                         conn.setDoInput(true);
-                        conn.connect();;
+                        conn.connect();
 
                         InputStream is = conn.getInputStream();
                         bitmap = BitmapFactory.decodeStream(is);
