@@ -9,14 +9,18 @@
 <h4> OEM SDKs </h4>
  애플은 iOS SDK를 2008년에 릴리즈하였고, 구글은 Android SDK를  2009년에 릴리즈 하였음. 이 두 SDK들은 각기 다른 언어를 기반으로 하고 있음.(Objective-C, JAVA)
 
+<div>
+&nbsp;&nbsp;&nbsp;<img width = "500" src = "https://user-images.githubusercontent.com/42960479/69326786-bf720a00-0c8f-11ea-9c69-f61d8801b18e.png">
+</div>
+
+ 여기서 앱은 위젯을 만들고 메세지와 전화와 같은 서비스에 접근하기 위해 플랫폼과 직접 연결을 함. 위젯들은 스크린 캔버스에 렌더가 되고, 화면에서 발생된 이벤트들은 다시 해당 위젯으로 보내지게 됨. 매우 간단한 구조이지만, 각 플랫폼마다 위젯이 다르고 언어 또한 다르기 때문에 위의 구조에서는 각 플랫폼마다 독립적인 앱을 만들어야함.
+ 
+<h4> WebViews </h4>
 ### 1) React-Ntive
 
 #### 장점
       1. react 언어가 javascript 기반
-      2. 코드를 수정 혹은 새로 저장 시 해당 부분만 효율적으로 리로드 시켜 바로 수정된 부분을 확인 할 수 있다.
-      3. css형태를 빌려 UI를 구성할 수 있다.
-      4. code push 를 사용하여 앱을 심사없이 수정할 수 있다.
-      5. github commit 수가 많다.
+      2. 
 
 
 #### 단점 
@@ -29,6 +33,3 @@
 <h4> Flutter란? </h4>
   Flutter 모바일 앱 SDK는 빠르고, 보기 좋은 모바일 앱을 만들 수 있는 새로운 방법임. 과거엔 정해진 틀이 있어 비슷한 형태의 앱을 만들었는데 Flutter는 그것을 해결하는데 아주 좋았음. 
   
-<div>
-      <img width = "500" src = "https://user-images.githubusercontent.com/42960479/69326786-bf720a00-0c8f-11ea-9c69-f61d8801b18e.png">
-</div>
