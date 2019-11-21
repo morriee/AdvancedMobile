@@ -67,7 +67,7 @@ Dart 프로그램 영역(녹색)과 네이티브플랫폼 코드(파랑) 사이�
 
 Flutter 앱의 최소 사이즈는 약6.7mb이고, 다른 개발 도구들을 사용해서 만든 최소 크기의 앱들과 비슷한 사이즈임.
 
-## 2. cordova/Xamarin/Ionic
+## 3) cordova/Xamarin/Ionic
 
 1. Cordova 
 
@@ -118,6 +118,50 @@ Cordova의 특징
 				-ios나 android용 앱을 개발하려는 경우 가장 큰 문제는 UX 아키텍쳐의 큰 차이
 				-이러한 차이가 80%이상이기 떄문에 Xamrin이 제공하는 최대값은 문제의 20%정도로 제한
 				-따라서 ios와 android사아의 UX코딩,애니메이션,리소스, 동기화,보기,워크 플로우등의 차이는 뚜렷히 구분될지				  도 모름
+				
+<h3>2019년 하이브리드 앱 개발 프레임워크 TOP 5</h3>
+
+1. REACT NATIVE
+	React Native는 2013년 Facebook에서 출시
+	JavaScript 기반의 오픈 소스 크로스 플랫폼 앱 개발 프레임워크로, 개발자는 더욱 짧은 개발 주기와 빠른 개발 속도로 고성능의 모바일 앱을 개발가능
+
+React Native는 JSX 기반(JavaScript-XML) 프레임워크라는 장점
+	모바일 앱 개발을 위해 Swift나 Java와 같은 복잡한 프로그래밍 언어를 학습할 필요가 없음
+	프레임워크에서 React Native 코드를 네이티브 뷰로 변환한 다음 렌더링을 수행하므로 유저에게 네이티브와 같은 환경을 제공
+	React Native로 만든 유명한 앱은 Facebook과 Instagram 등이 있음
+
+
+2. FLUTTER
+	Flutter는 Google에서 출시한 제품으로, 모바일 앱 개발을 위한 오픈 소스 SDK(소프트웨어 개발 키트)
+	React Native 앱이나 하이브리드 앱과 달리 Flutter는 네이티브 코드의 컴파일이 가능
+	컴파일을 통해 진정한 네이티브 환경을 제공 
+	Flutter는 Dart라는 프로그래밍 언어로 사용
+	모든 기기에서 구동 가능한 iOS와 Android 앱을 개발가능
+	특정 유형의 모바일 앱 프로젝트에 대해서만 Flutter를 사용할 수 있음
+
+
+
+3. IONIC
+	Ionic은 오픈 소스 기반 SDK로, 모바일 앱 개발 프레임워크 중 가장 폭넓게 사용되는 프레임워크 중 하나
+	Ionic을 사용하면 개발자는 HTML, CSS3, JavaScript의 조합으로 다양한 플랫폼에 대한 네이티브 기반 앱을 개발할 수 있움
+	최소한의 DOM을 사용하여 성능과 효율성을 극대화하고 Ionic Native와 Cordova와 같은 네이티브 API를 제공
+
+
+
+4. XAMARIN
+	Xamarin은 2016년에 Microsoft가 매입해서 오픈 소스로 만듬
+	C# 기반의 크로스 플랫폼 앱 개발 프레임워크로, 나머지 프레임워크와 다른 방식을 취함
+	Xamarin은 코드 공유가 가능, 덕분에 개발자가 여러 플랫폼에 필요한 모바일 앱을 만드는 데 시간을 크게 절감할 수 있음
+	뛰어난 네이티브 UI가 제공되어 고객에게 좋은 사용자 경험을 제공할 수 있음
+
+
+
+5. ADOBE PHONEGAP
+	Adobe PhoneGap은 HTML5, CSS3, JavaScript를 사용하여 모바일 앱을 만드는 프레임워크
+	최고 수준의 성능으로 어떠한 하드웨어 제한 없이 모바일 앱을 개발할 수 있다는 장점이 있음
+	이 외에도 스토리지, 전화번호부, 가속도계, 카메라, GPS 등과 같은 내장된 하드웨어 기능 사용을 지원
+	다른 하이브리드 모바일 앱 프레임워크와는 달리 PhoneGap은 Blackberry, Windows, Ubuntu, Firefox OS, Mac OS는 물론 Android 및 iOS를 포함한 대부분의 운영 체제에 맞는 모바일 앱을 개발할 수 있음
+
 ## 3. Papaya Diary 의 특징
       1. Firebase와 연동이 필요하다.
       2. UI구성이 간단하다.
