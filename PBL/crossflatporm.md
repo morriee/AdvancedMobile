@@ -1,4 +1,4 @@
-## React-NAtive
+## React-Ntive
 ### 장점
       1. react 언어가 javascript 기반
       2. 
