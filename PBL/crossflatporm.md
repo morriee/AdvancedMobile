@@ -1,7 +1,9 @@
 ## React-Ntive
 ### 장점
       1. react 언어가 javascript 기반
-      2. 
+      2. github commit 이 많다.
+      3. css형태를 빌려 UI를 구성할 수 있다.
+      4. code push 를 사용하여 앱을 심사없이 수정할 수 있다.
 
 
 ### 단점 
