@@ -67,7 +67,58 @@ Dart 프로그램 영역(녹색)과 네이티브플랫폼 코드(파랑) 사이�
 
 Flutter 앱의 최소 사이즈는 약6.7mb이고, 다른 개발 도구들을 사용해서 만든 최소 크기의 앱들과 비슷한 사이즈임.
 
-## 2. Papaya Diary 의 특징
+## 2. cordova/Xamarin/Ionic
+
+1. Cordova 
+
+-Adobe에서 제공하는 PhoneGap이 Apche 재단에 제공한 오픈소스 모바일 개발 플랫폼
+	
+Cordova의 특징
+1. HTML,CSS,JS 기반으로 개발 가능
+2. Android, IOS, Window Phone 등 8개의 플랫폼을 동시에 대응 가능한 하이브리드 앱
+3. 단일 코드로 다양한 디바이스 개발 가능
+4. 다양한 플러그인 제공
+5. 다양한 프레임 워크 지원
+
+            -Adobe PhoneGap : HTML5, CSS, JavaScript를 활용해 모바일 기기를 위한 애플리케이션을 제작
+            -Ionic : AngularJS기반으로 만들어졌으며 다양한 유틸리티를지원, 크로스플랫폼 빌드가 가능, 활발한 커뮤니티
+            -Onsen UI : Ionic의 경쟁사로 AngularJS, Vue.js, React지원
+            -VIsual studio : MS사에서 만든 통합 IDE, 크로스 플랫폼 지원, 고급 빌드 및 디버깅 지원
+
+2. Ionic
+	-하이브리드 앱을 개발하기에 최적화된 환경을 제공하고, ionic은 HTML5 API를 사용할 수 있는 컴포넌트들과 크로스 플랫폼 빌드가 가능한 Cordova 기반으로 구성된 하이브리드 앱 개발 프레임워크
+		Ionic의 특징
+			
+			1.Cordova(PhoneGap과 동일) 환경을 제공
+			2.Cordova 플러그인을 사용할 수 있음
+			3.AngularJS를 기반으로 만들어졌으며, SPA를 MVC나 MVVM 패턴으로 개발을 할 수 있음
+			4.네이티브에 가까운 UI 컴포넌트들을 제공
+			5.HTML으로 UI를 만들고 JavaScript의 데이타 업데이트를 빠르게 적용할 수 있음
+			6.크로스 플랫폼 빌드가 가능 (ios, android 이외에도 다양한 플랫폼을 지원합니다.)
+			7.활발한 개발자 포럼을 지원
+
+3. Xamarin
+-Xamarin 은 C# 과 크로스-플랫폼을 위한 .Net 레이어로 쌓여진 네이티브 라이브러리 를 사용 (크로스플랫폼 개발로 만들어지는 네이티브 앱)
+
+		Xamarin의 특징
+			1. Xamarin은 C#언어, 클래스 라이브러리 (BCL)와 IOS, android, 그리고 윈도우폰. 이 세가지 크로스 모바일 플랫폼에서 작동하는 런타임이란 점에서 독특한 위치에 있으며 ios와 안드로이드의 플랫폼 SDK들을 거의 완전하게 바인딩 가능
+			2. Xamarin은 Objective-c, Java, C , C++ 라이브러리들을 직접 호출하는 기능을 제공 및 기존 Objective-c, Java, C , C++ 로 작성된 ios, 안드로이드 라이브러리들을 사용할 수가 있다.
+			3. C#으로 작성된 Xamrin 어플리케이션은 Objective-C와 Java의 동적언어 기능, 람다식, 링크, 병렬 프로그래밍 기능, 제네릭 등 사용가능
+
+			4.Xamarin은 .NET BLC를 사용하여 현리하고 유연한 기능을 가짐
+			5.기존 C# code들을 어플리케이션에서 사용 가능하도록 컴파일 될수도 있고 BCL에서 커버되지 못한 기능들도 ㅏ용할수있게 수천개의 라이브러리들의 액세스를 제공
+			6.Xamarin은 Mac OS X 에서는 Xamrin Studio를, 윈도우에서는 Xmarin Studio 또는 VIrtual Studio를 사용함으로써 이 두개의 코드 자동완성, 세련된 프로젝트와 솔루션 관리 시스템, 편리한 프로젝트 템플릿 라이브러리, 통합된 소스 컨트롤 그리고 기타 여러가지 기능들을 포함하는 현대적인 IDE임
+			7.Xamarin은 IOS, android, window phone을 지원하며 어플리케이션들은 90%이상의 코드를 공유하도록 작성될수있으며, Xamarin Mobile 라이브러리는 세계플랫폼의 공용 리소스에 액세스할 수 있게 통일된 API를 제공
+			8. Ios에서는 .app파일로, android에서는 .apk파일로 나옴
+			
+		Xamarin의 단점
+			1. 최신에 업데이트된 기능보다는 조금 늦은 지원
+			2. 오픈 소스 라이브러리를 사용하는데 제한(.NET 오픈소스 리소스에서 제공하는 구성 요소만 사용해야함)
+			3. UX architecture에 있어서 약간의 문제
+				-ios나 android용 앱을 개발하려는 경우 가장 큰 문제는 UX 아키텍쳐의 큰 차이
+				-이러한 차이가 80%이상이기 떄문에 Xamrin이 제공하는 최대값은 문제의 20%정도로 제한
+				-따라서 ios와 android사아의 UX코딩,애니메이션,리소스, 동기화,보기,워크 플로우등의 차이는 뚜렷히 구분될지				  도 모름
+## 3. Papaya Diary 의 특징
       1. Firebase와 연동이 필요하다.
       2. UI구성이 간단하다.
       3. 외부 라이브러리가 필요하다. (feat. google 지도, google 캘린더)
@@ -76,10 +127,10 @@ Flutter 앱의 최소 사이즈는 약6.7mb이고, 다른 개발 도구들을 �
       6. 웹에서 구동이 필요 없고 모바일에서만 작동해도 된다.
       7. 성능이 좋지 않아도 상관없다.
 
-## 3. 최종 선택: Ionic
+## 4. 최종 선택: Ionic
 - 이유: 1. 파이어베이스와 연동이 가능하고 필요한정도의 ui구성이 가능하며, api를 사용할 수 있기 때문임.
 
-## 4. 다른 플랫폼들을 선택하지 않은 이유
+## 5. 다른 플랫폼들을 선택하지 않은 이유
       1. react-native 
             1) 파이어베이스 연동이 안됨.
       2. Flutter
