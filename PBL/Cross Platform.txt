@@ -42,7 +42,7 @@ cordova/Xamarin/Ionic
 			3. C#으로 작성된 Xamrin 어플리케이션은 Objective-C와 Java의 동적언어 기능, 람다식, 링크, 병렬 프로그래밍 기능, 제네릭 등 사용가능
 
 			4.Xamarin은 .NET BLC를 사용하여 현리하고 유연한 기능을 가짐
-			5.기존 C# code들을 어플리케이션에서 사용 가능하도록 컴파일 될수도 있고 BCL에서 커버되지 못한 기능들도 ㅏ용할수있게 수천개의 라이브러리들의 액세스를 제공
+			5.기존 C# code들을 어플리케이션에서 사용 가능하도록 컴파일 될수도 있고 BCL에서 커버되지 못한 기능들도 사용할수있게 수천개의 라이브러리들의 액세스를 제공
 			6.Xamarin은 Mac OS X 에서는 Xamrin Studio를, 윈도우에서는 Xmarin Studio 또는 VIrtual Studio를 사용함으로써 이 두개의 코드 자동완성, 세련된 프로젝트와 솔루션 관리 시스템, 편리한 프로젝트 템플릿 라이브러리, 통합된 소스 컨트롤 그리고 기타 여러가지 기능들을 포함하는 현대적인 IDE임
 			7.Xamarin은 IOS, android, window phone을 지원하며 어플리케이션들은 90%이상의 코드를 공유하도록 작성될수있으며, Xamarin Mobile 라이브러리는 세계플랫폼의 공용 리소스에 액세스할 수 있게 통일된 API를 제공
 			8. Ios에서는 .app파일로, android에서는 .apk파일로 나옴
@@ -53,7 +53,7 @@ cordova/Xamarin/Ionic
 			3. UX architecture에 있어서 약간의 문제
 				-ios나 android용 앱을 개발하려는 경우 가장 큰 문제는 UX 아키텍쳐의 큰 차이
 				-이러한 차이가 80%이상이기 떄문에 Xamrin이 제공하는 최대값은 문제의 20%정도로 제한
-				-따라서 ios와 android사아의 UX코딩,애니메이션,리소스, 동기화,보기,워크 플로우등의 차이는 뚜렷히 구분될지				  도 모름
+				-따라서 ios와 android사아의 UX코딩,애니메이션,리소스, 동기화,보기,워크 플로우등의 차이는 뚜렷히 구분될지도 모름
 
 
 
