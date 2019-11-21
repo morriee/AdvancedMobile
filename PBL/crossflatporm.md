@@ -35,3 +35,10 @@
 <div>
       <img width = "500" src = "https://user-images.githubusercontent.com/42960479/69326786-bf720a00-0c8f-11ea-9c69-f61d8801b18e.png">
 </div>
+
+## 2. Papaya Diary 의 특징
+    1. Firebase와 연동이 필요하다.
+    2. UI구성이 간단하다.
+    3. 외부 라이브러리가 필요하다. (feat. google 지도, google 캘린더)
+    4. 앱 구성이 간단하다.
+    5. 업데이트가 자주 필요하지 않다.
