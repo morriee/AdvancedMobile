@@ -1,0 +1,126 @@
+package com.example.story;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+import android.content.Intent;
+import android.graphics.Color;
+import android.net.Uri;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class MemoViewActivity extends AppCompatActivity {
+    TextView mMemoText;
+    TextView mMemoDate;
+    ImageView mPhoto;
+
+    String mMemoMode;
+    String mMemoId;
+
+    String mMediaPhotoId;
+    String mMediaPhotoUri;
+
+    String tempPhotoUri;
+
+    String mDateStr;
+    String mMemoStr;
+    private Toolbar mToolbar;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.memo_view_activity);
+
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolbar.setTitle("");
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        mPhoto = (ImageView)findViewById(R.id.itemPhoto);
+        mMemoText = (TextView) findViewById(R.id.itemText);
+        mMemoDate = (TextView) findViewById(R.id.itemDate);
+
+
+        Intent intent = getIntent();
+        Data data = (Data) intent.getSerializableExtra("OBJECT");
+
+        mMemoMode = intent.getStringExtra(BasicInfo.KEY_MEMO_MODE);
+        if(mMemoMode.equals(BasicInfo.MODE_MODIFY) || mMemoMode.equals(BasicInfo.MODE_VIEW)) {
+            processIntent(data);
+        }
+
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.toolbar_button, menu);
+
+
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:{
+                finish();
+                return true;
+            }
+            case R.id.toolbar_button: {
+                Intent intent = new Intent(MemoViewActivity.this,MemoInsertActivity.class);
+                intent.putExtra(BasicInfo.KEY_MEMO_MODE,   BasicInfo.MODE_VIEW);
+
+
+                Data data = new Data();
+                data.setId(mMemoId);
+                data.setDate(mMemoStr);
+                data.setText(mMemoStr);
+                data.setId_Photo(mMediaPhotoId);
+                data.setUrl_Photo(mMediaPhotoUri);
+
+
+                intent.putExtra("OBJECT", data);
+
+                startActivityForResult(intent,BasicInfo.REQ_VIEW_ACTIVITY);
+
+            }
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void processIntent(Data data) {
+        mMemoId = data.getId();
+        mMemoText.setText(data.getText());
+        mMemoStr = data.getText();
+        mMemoDate.setText(data.getDate());
+        mDateStr = data.getDate();
+        mMediaPhotoId = data.getId_Photo();
+        mMediaPhotoUri = data.getUrl_Photo();
+
+
+
+        setMediaImage(mMediaPhotoId, mMediaPhotoUri);
+
+
+    }
+
+
+    public void setMediaImage(String photoId, String photoUri) {
+
+        if(photoId.equals("") || photoId.equals("-1")) {
+            mPhoto.setImageResource(R.drawable.person_add);
+        } else {
+            mPhoto.setImageURI(Uri.parse(BasicInfo.FOLDER_PHOTO + photoUri));
+        }
+
+    }
+
+}
