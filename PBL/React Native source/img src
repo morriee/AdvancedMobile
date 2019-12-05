@@ -1,0 +1,32 @@
+import React, { Component } from 'react';
+import { ScrollView, Image, Text } from 'react-native';
+
+export default class IScrolledDownAndWhatHappenedNextShockedMe extends Component {
+  render() {
+      return (
+        <ScrollView>
+         
+          <Image source={{uri: "https://user-images.githubusercontent.com/42960479/70226289-ed794300-1793-11ea-9b50-9fd98f77cb9b.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://user-images.githubusercontent.com/42960479/70227211-8d839c00-1795-11ea-8e34-7236e371a232.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://user-images.githubusercontent.com/42960479/70227213-8f4d5f80-1795-11ea-846f-7549de7678f6.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://user-images.githubusercontent.com/42960479/70227217-907e8c80-1795-11ea-9237-4a174d60a565.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://user-images.githubusercontent.com/42960479/70227225-91afb980-1795-11ea-94a0-07a49c2d907c.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://user-images.githubusercontent.com/42960479/70227238-95dbd700-1795-11ea-96a1-5b368d96652f.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://user-images.githubusercontent.com/42960479/70227242-970d0400-1795-11ea-8a4c-0c3aca178958.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://user-images.githubusercontent.com/42960479/70227245-98d6c780-1795-11ea-875f-0e709328112e.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://user-images.githubusercontent.com/42960479/70227252-9d02e500-1795-11ea-9f8b-b6bb816e1be8.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://user-images.githubusercontent.com/42960479/70227253-9d9b7b80-1795-11ea-85e8-c35c92d100a1.png", width: 64, height: 64}} />
+
+          <Image source={{uri: "https://user-images.githubusercontent.com/42960479/70227254-9d9b7b80-1795-11ea-98e7-6e34024c3d5e.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://user-images.githubusercontent.com/42960479/70227255-9e341200-1795-11ea-8da4-bc8851000329.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://user-images.githubusercontent.com/42960479/70227256-9e341200-1795-11ea-9477-eb297f259ee3.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://user-images.githubusercontent.com/42960479/70227258-9ecca880-1795-11ea-85e5-835fd48e0488.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://user-images.githubusercontent.com/42960479/70227259-9ecca880-1795-11ea-9e5a-5535e17edf0e.png", width: 64, height: 64}} />
+          <Text style={{fontSize:96}}>What's the best</Text>
+          <Image source={{uri: "https://user-images.githubusercontent.com/42960479/70227260-9ecca880-1795-11ea-964a-80213191ae1e.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://user-images.githubusercontent.com/42960479/70227262-9f653f00-1795-11ea-9d8b-5e02849bb600.png", width: 64, height: 64}} />
+
+        </ScrollView>
+    );
+  }
+}
