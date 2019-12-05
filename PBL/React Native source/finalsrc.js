@@ -5,14 +5,15 @@ export default class IScrolledDownAndWhatHappenedNextShockedMe extends Component
   render() {
       return (
         <ScrollView>
+        //alignItems는 아이템을 '왼쪽/가운데/오른쪽'으로 붙이고 justifyContent는 '위/중앙/아래'를 정함.여기서는 왼쪽과 중앙을 선택함.
           <View style={{height: 50, backgroundColor: 'green', alignItems: 'left', justifyContent: 'center'}}>
-            <Text style={{color: 'white'}}> MyShoppingMall </Text>
+            <Text style={{color: 'white'}}> MyShoppingMall </Text>// 글자색이 흰색인이유는 위의 상단 제목바의 글씨이기 때문.
           </View>
-          <View style={{height: 110, flexDirection: 'row'}}>
-            <View style={{width: 110, margin: 5}}>
+          <View style={{height: 110, flexDirection: 'row'}}>  //flexDirection: 뷰가 사진과 글들을 한군데 묶음으로 보고 이게 하나의 뷰. 따라서 이미지와 글들을 행으로 배치함.
+            <View style={{width: 110, margin: 5}}>  //이미지를 감싸고있는 뷰의 스타일.
               <Image source={{uri: "https://user-images.githubusercontent.com/42960479/70226289-ed794300-1793-11ea-9b50-9fd98f77cb9b.png", width: 100, height: 100}} />
             </View>
-            <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+            <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>  //flex 1: 나머지공간. 이미지가 쓰고 남은 모든공간
               <Text style={{fontSize: 20}}> 체크무늬셔츠 </Text>
               <Text> </Text>
               <Text style={{color: 'gray'}}> 체크무늬 패턴의 디자인인 셔츠 </Text>
@@ -20,7 +21,7 @@ export default class IScrolledDownAndWhatHappenedNextShockedMe extends Component
               <Text> 34,000원 </Text>
             </View>
           </View>
-          <View style={{flex: 1, backgroundColor: '#F9F9F9'}}>
+          <View style={{flex: 1, backgroundColor: '#F9F9F9'}}>//item과 item사이의 옅은 회색.
             <Text style={{fontSize: 4}}> </Text>
           </View>
           
