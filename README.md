@@ -8,4 +8,4 @@
 
 ### 12.03 업데이트된 현재 진행중인 파파야 프로젝트 전체 소스 코드 : https://github.com/morriee/Papaya3
 ### 프로젝트 제안서 : https://github.com/morriee/AdvancedMobile/wiki/%ED%94%84%EC%A0%9D-%EC%A0%9C%EC%95%88%EC%84%9C
-
+### 최종 발표자료 : https://github.com/morriee/AdvancedMobile/blob/master/%ED%85%80%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%EC%B5%9C%EC%A2%85.md
